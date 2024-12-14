@@ -1,0 +1,288 @@
+# Please replace the file path for the image with you respective file paths.
+
+
+# comment for load image
+load res/ScriptImage/nature.jpg nature
+
+# flip an image
+horizontal-flip nature nature-horizontal
+
+#flip an image all caps
+HORIZONTAL-FLIP nature-horizontal nature-horizontal-all-caps
+
+#save image
+Save res/ScriptImage/nature-horizontal.jpg nature-horizontal
+
+
+# vertical flip
+vertical-flip nature nature-vertical
+
+#save image
+Save res/ScriptImage/nature-vertical.jpg nature-vertical
+
+# flip an image horizontal-vertical
+Vertical-Flip nature-horizontal nature-horizontal-vertical
+
+#save image
+Save res/ScriptImage/nature-horizontal-vertical.jpg nature-horizontal-vertical
+
+
+# flip an image vertical-horizontal
+Horizontal-flip nature-vertical nature-vertical-horizontal
+
+#save image
+Save res/ScriptImage/nature-vertical-horizontal.jpg nature-vertical-horizontal
+
+
+# red component of an image
+red-component nature nature-red
+
+#save image
+Save res/ScriptImage/nature-red.jpeg nature-red
+
+
+#green component 
+Green-component nature nature-green
+
+#save image
+Save res/ScriptImage/nature-green.jpeg nature-green
+
+#Blue component
+Blue-component nature nature-blue
+
+#save image
+Save res/ScriptImage/nature-blue.jpeg nature-blue
+
+#value component of an image
+Value-component nature nature-value
+
+#save image
+Save res/ScriptImage/nature-value.jpeg nature-value
+
+# intensity component of an image
+Intensity-component nature nature-intensity
+
+#save image
+Save res/ScriptImage/nature-intensity.jpg nature-intensity
+
+# luma-component of an image
+Luma-component nature nature-luma
+
+#save image
+Save res/ScriptImage/nature-luma.jpg nature-luma
+
+
+# Blur the image
+Blur nature nature-blur
+
+#save image
+Save res/ScriptImage/nature-blur.jpg nature-blur
+
+# brighten image
+brighten 50 nature nature-brighten
+
+# sharpen
+sharpen nature nature_sharpen
+
+#save image
+Save res/ScriptImage/nature-sharpen.jpg nature_sharpen
+
+#save image
+Save res/ScriptImage/nature-brighten.jpg nature-brighten
+
+# darken
+Brighten -50 nature nature-darken
+
+#save image
+Save res/ScriptImage/nature-darken.jpg nature-darken
+
+#sepia image
+Sepia nature nature-sepia
+
+#save image
+Save res/ScriptImage/nature-sepia.jpg nature-sepia
+
+# rgb split
+rgb-split nature nature-split-red nature-split-green nature-split-blue
+
+# save red 
+Save res/ScriptImage/nature-split-red.jpeg nature-split-red
+
+# save green 
+Save res/ScriptImage/nature-split-green.jpg nature-split-green
+
+# save red 
+Save res/ScriptImage/nature-split-blue.jpeg nature-split-blue
+
+
+#rgb-combine
+rgb-combine nature-rgb-combined nature-split-red nature-split-green nature-split-blue
+
+# save combined image
+Save res/ScriptImage/nature-rgb-combined.jpeg nature-rgb-combined
+
+# read jpg image and save a PPM file 
+Save res/ScriptImage/nature_ppm.ppm nature
+
+# load the ppm 
+Load res/ScriptImage/nature_ppm.ppm nature_ppm
+
+# Save the PPM
+Save res/ScriptImage/ppm_to_png_same.ppm nature_ppm
+
+#save the ppm to png
+Save res/ScriptImage/ppm_to_png.png nature_ppm
+
+# load image
+load res/ScriptImage/nature.jpg nature
+
+# compress Image
+compress 70 nature nature-compress
+
+# save compressed Image
+save res/ScriptImage/compress.jpg nature-compress
+
+# split image
+blur nature nature-blur-split-50 split 50
+
+#save blur image using split
+save res/ScriptImage/nature-blur-split-50.jpg nature-blur-split-50
+
+# split image
+sepia nature nature-sepia-split-50 split 50
+
+#save blur image using split
+save res/ScriptImage/nature-sepia-split-50.jpg nature-sepia-split-50
+
+# value component with split
+Value-component nature nature-value-split-40 split 40
+
+#save value component with split
+save res/ScriptImage/nature-value-split-40.jpg nature-value-split-40
+
+# sharpen
+sharpen nature nature_sharpen_split split 40
+
+#save image
+Save res/ScriptImage/nature_sharpen_split-40.jpg nature_sharpen_split
+
+# intensity component with split
+Intensity-component nature nature-intensity-split-40 split 40
+
+#save intensity component with split
+save res/ScriptImage/nature-intensity-split-40.jpg nature-intensity-split-40
+
+# luma component with split
+luma-component nature nature-luma-split-40 split 40
+
+#save luma component with split
+save res/ScriptImage/nature-luma-split-40.jpg nature-luma-split-40
+
+# color correctness on galaxy image
+color-correct nature nature_corrected
+
+#save corrected image
+save res/ScriptImage/nature_corrected.jpg nature_corrected
+
+# color correctness on galaxy image with split
+color-correct nature nature_corrected_split split 50
+
+#save corrected image using split command
+save res/ScriptImage/nature_corrected_split.jpg nature_corrected_split
+
+# levels adjustment
+levels-adjust 20 100 255 nature nature_adjusted
+
+# save levels adjusted
+save res/ScriptImage/nature_adjusted.jpg nature_adjusted
+
+# levels adjustment with Split command
+levels-adjust 20 100 255 nature nature_adjusted_split split 50
+
+# save levels adjusted with split command
+save res/ScriptImage/nature_adjusted_split.jpg nature_adjusted_split
+
+# histogram generation
+histogram nature nature_hist
+
+#save histogram
+Save res/ScriptImage/nature_hist.jpg nature_hist
+
+#grey scale image
+grey nature nature-grey
+
+#save
+save res/ScriptImage/grey.jpeg nature-grey
+
+#grey scale image
+grey nature nature-grey-split-25 split 25
+
+#save split grey image
+save res/ScriptImage/nature-grey-split-25.jpeg nature-grey-split-25
+
+# load mask image
+load res/ScriptImage/mask.jpg mask
+
+# blur Image with mask
+blur nature mask masked-blur
+
+#save blurred image
+save res/ScriptImage/masked-blur.jpg masked-blur
+
+# sharpen Image with mask
+sharpen nature mask masked-sharpen
+
+#save sharpened image
+save res/ScriptImage/masked-sharpen.jpg masked-sharpen
+
+# sepia Image with mask
+sepia nature mask masked-sepia
+
+#save sepia image
+save res/ScriptImage/masked-sepia.jpg masked-sepia
+
+# value Image with mask
+value-component nature mask masked-value
+
+#save value image
+save res/ScriptImage/masked-value.jpg masked-value
+
+# luma Image with mask
+luma-component nature mask masked-luma
+
+#save luma image
+save res/ScriptImage/masked-luma.jpg masked-luma
+
+# intensity Image with mask
+intensity-component nature mask masked-intensity
+
+#save intensity image
+save res/ScriptImage/masked-intensity.jpg masked-intensity
+
+# red component of an image
+red-component nature mask nature-red-mask
+
+#save red image
+save res/ScriptImage/nature-red-mask.jpg nature-red-mask
+
+# green component of an image
+green-component nature mask nature-green-mask
+
+#save green image
+save res/ScriptImage/nature-green-mask.jpg nature-green-mask
+
+# green component of an image
+blue-component nature mask nature-blue-mask
+
+#save green image
+save res/ScriptImage/nature-blue-mask.jpg nature-blue-mask
+
+# downsize an Image
+downsize 100 100 nature nature-downsized
+
+#save downsized image
+save res/ScriptImage/nature-downsized.jpg nature-downsized
+
+
+# exit
+exit

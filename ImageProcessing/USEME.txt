@@ -1,0 +1,350 @@
+Image Manipulation and Enhancement 
+
+These are the commands that are supported by our application :
+
+1. load image_path image_name
+	
+	Loads the image in image_path into the given image_name.
+	This command must be executed before all other commands.
+
+	Eg. load res/ScriptImage/nature.jpg nature
+
+2. save image_path image_name
+
+	Saves the image in the image_name to the specified image_path.
+	This must be done only after loading the image.
+
+	Eg. save res/ScriptImage/nature.jpg nature
+
+3. red-component image-name dest-image-name
+
+	Computes the red component of the image-name and writes it in the dest-image-name.
+
+	Eg. red-component nature nature-red
+
+4. green-component image-name dest-image-name
+
+	Computes the green component of the image-name and writes it in the dest-image-name.
+
+	Eg. green-component nature nature-green
+
+5. blue-component image-name dest-image-name
+
+	Computes the blue component of the image-name and writes it in the dest-image-name.
+
+	Eg. blue-component nature nature-blue
+
+6. value-component image-name dest-image-name
+
+	Computes the value component of the image-name and writes it in the
+	dest-image-name.
+
+	Eg. value-component nature nature-value
+
+7. luma-component image-name dest-image-name
+
+	Computes the luma component of the image-name and writes it in the
+	dest-image-name.
+
+	Eg. luma-component nature nature-luma
+
+8. intensity-component image-name dest-image-name
+
+	Computes the intensity component of the image-name and writes it in the
+	dest-image-name.
+
+	Eg. intensity-component nature nature-intensity
+
+9. vertical-flip image-name dest-image-name
+
+	Does a vertical flip of the image-name and writes it in the dest-image-name.
+	
+	Eg. vertical-flip nature nature-verticalFlip
+
+10. horizontal-flip image-name dest-image-name
+
+	Does a horizontal flip of the image-name and writes it in the dest-image-name.
+
+	Eg. horizontal-flip nature nature-horizontalFlip
+
+11. brighten increment image-name dest-image-name
+
+	Brightens the image in image-name and writes it in the dest-image-name.
+
+	Eg. brighten 50 nature nature-brighten
+
+12. brighten decrement image-name dest-image-name
+
+	Darkens the image in image-name and writes it in the dest-image-name.
+
+	Eg. brighten -50 nature nature-darken
+
+13. rgb-split image-name dest-image-name-red dest-image-name-green dest-image-name-blue
+
+	Splits the image-name into three components - red, green and blue components. 
+	The red component is put in dest-image-name-red.
+	The green component is put in dest-image-name-green.
+	The blue component is put in dest-image-name-blue.
+
+	Eg. rgb-split nature nature-red nature-green nature-blue
+
+14. rgb-combine image-name red-image green-image blue-image
+
+	Combines the red component (red-image), green component (green-image) and blue
+	component (blue-component) image into one image (image-name).
+
+	Eg. rgb-combine nature nature-red nature-green nature-blue
+
+15. blur image-name dest-image-name
+
+	Blurs the image-name and writes it in dest-image-name.
+
+	Eg. blur nature nature-blur
+
+16. sharpen image-name dest-image-name
+
+	Sharpens the image-name and writes it in dest-image-name.
+
+	Eg. sharpen nature nature-sharpened
+
+17. sepia image-name dest-image-name
+
+	Applies the sepia filter to the image-name and writes it to dest-image-name.
+
+	Eg. sepia nature nature-sepia
+
+18. compress percentage image-name dest-image-name
+
+	Compresses the image-name by the given percentage and writes it to dest-image-name.
+	
+	Eg. compress 50 nature nature-compressed
+
+19. histogram image-name dest-image-name
+
+	Finds the histogram of the image-name and writes it to dest-image-name.
+
+	Eg. histogram nature nature-histogram
+
+20. color-correct image-name dest-image-name
+
+	Color corrects the image-name and writes it to dest-image-name.
+
+	Eg. color-correct nature nature-colorCorrected
+
+21. levels-adjust b m w image-name dest-image-name
+
+	Level adjusts the image-name based on the b,m and w values and writes it the
+	dest-image-name.
+
+	Eg. levels-adjust 20 100 255 nature nature-levelAdjusted
+
+22. levels-adjust b m w image-name dest-image-name split p
+
+	Level adjusts the image-name based on the b,m and w values and writes the split view
+	to the dest-image-name. Provides the ability to specify a vertical line position ‘p’ to
+	generate a split view of the levels-adjust image where ‘p’ is a percentage of the width 	of the image. 
+
+	Eg. levels-adjust 20 100 255 nature nature-levelAdjusted split 50
+
+23. blur image-name dest-image split p
+
+	Blurs the image-name and writes the split view to the dest-image-name. Provides the
+	ability to specify a vertical line position ‘p’ to generate a split view of the blur 		image where ‘p’ is a percentage of the width of the image. 
+
+	Eg. blur nature nature-blur split 50
+
+24. intensity-component image-name dest-image-name split p
+
+	Find the intensity component of the image-name and writes the split view to the
+	dest-image-name. Provides the ability to specify a vertical line position ‘p’ to 		generate split view of the intensity component of the image where ‘p’ is a percentage of 	the width of the image.
+
+	Eg. intensity-component nature nature-intensity split 50
+
+25. value-component image-name dest-image-name split p
+
+	Find the value component of the image-name and writes the split view to the
+	dest-image-name. Provides the ability to specify a vertical line position ‘p’ to 		generate split view of the value component of the image where ‘p’ is a percentage of the 	width of the image.
+	
+	Eg. value-component nature nature-value split 50
+
+26. luma-component image-name dest-image-name split p
+
+	Find the luma component of the image-name and writes the split view to the
+	dest-image-name. Provides the ability to specify a vertical line position ‘p’ to 		generate split view of the luma component of the image where ‘p’ is a percentage of the 	width of the image.
+
+	Eg. luma-component nature nature-luma split 50
+
+27. color-correct image-name dest-image-name split p
+
+	Color corrects the image-name and writes the split view to the dest-image-name. Provides 	the ability to specify a vertical line position ‘p’ to generate a split view of the 		color corrected image where ‘p’ is a percentage of the width of the image.
+
+	Eg. color-correct nature nature-colorCorrected split 50
+
+28. sharpen image-name dest-image split p
+
+	Sharpens the image-name and writes the split view to the dest-image-name. Provides
+	the ability to specify a vertical line position ‘p’ to generate a split view of the 		sharpened image where ‘p’ is a percentage of the width of the image.
+
+	Eg. sharpen nature nature-sharpen split 50
+
+29. sepia image-name dest-image-name split p
+
+	Applies the sepia filter on the image-name and writes the split view to the
+	dest-image-name.  Provides the ability to specify a vertical line position ‘p’ to 		generate a split view of the sepia image where ‘p’ is a percentage of the width of the 		image.
+
+	Eg. sepia nature nature-sepia split 50
+
+30. Blur image-name mask-name dest-image-name
+
+	Applies the blur image filter on the image-name where the mask image pixels are zero and 	writes it to dest-image-name. Where mask pixels are non-zero, the input image pixels are 	present. 
+
+	Eg. blur nature mask nature-mask-blur 
+
+31. Sharpen image-name mask-name dest-image-name
+
+	Applies the sharpen image filter on the image-name where the mask image pixels are zero 	and writes it to dest-image-name. Where mask pixels are non-zero, the input image pixels 	are present.
+	
+	Eg. sharpen nature mask nature-mask-sharpen  
+
+32. value-component image-name mask-name dest-image-name
+
+	Finds the value component of the image-name where the mask image pixels are zero and 		writes it to dest-image-name. Where mask pixels are non-zero, the input image pixels are 	present.
+
+	Eg. value-component nature mask nature-mask-value  
+
+33. luma-component image-name mask-name dest-image-name
+
+	Finds the luma component of the image-name where the mask image pixels are zero and 		writes it to dest-image-name. Where mask pixels are non-zero, the input image pixels are 	present. 
+
+	Eg. luma-component nature nature-mask nature-mask-luma
+
+34. intensity-component image-name mask-name dest-image-name
+
+	Finds the intensity component of the image-name where the mask image pixels are zero and 	writes it to dest-image-name. Where mask pixels are non-zero, the input image pixels are 	present. 
+
+	Eg. intensity-component nature nature-mask nature-mask-intensity
+
+35. Sepia image-name mask-name dest-image-name
+
+	Applies the sepia image filter on the image-name where the mask image pixels are zero 		and writes it to dest-image-name. Where mask pixels are non-zero, the input image pixels 	are present.
+
+	Eg. sepia nature nature-mask nature-mask-sepia
+
+36. red-component image-name mask-name dest-image-name
+
+	Finds the red component of the image-name where the mask image pixels are zero and 		writes it to dest-image-name. Where mask pixels are non-zero, the input image pixels are 	present.
+
+	Eg. red-component nature nature-mask nature-mask-red
+
+37. green-component image-name mask-name dest-image-name
+
+	Finds the green component of the image-name where the mask image pixels are zero and 		writes it to dest-image-name. Where mask pixels are non-zero, the input image pixels are 	present.
+
+	Eg. green-component nature nature-mask nature-mask-green
+
+38. blue-component image-name mask-name dest-image-name
+
+	Finds the blue component of the image-name where the mask image pixels are zero and 		writes it to dest-image-name. Where mask pixels are non-zero, the input image pixels are 	present.
+
+	Eg. blue-component nature nature-mask nature-mask-blue
+
+39. downsize small-width small-height image-name dest-image-name
+
+	Downscales the image-name to small-width x small-height dimensions and writes it to 		dest-image-name.
+
+	Eg. downsize 50 50 nature nature-downsized 
+
+40. run script-file-path
+
+	Run the script which consists of all the above commands.
+	
+	Eg. run res/Script.txt
+
+41. -file script-file-path
+
+	Eg. -file res/Script.txt
+
+42. Exit
+	
+	Eg. exit
+
+
+
+
+GRAPHICAL USER INTERFACE
+
+Our Image Processing GUI Application consists of 3 components:
+
+1. “Image I/O” component that takes care of the Loading, Saving and the Undo operations.
+
+2. “Image operation” component that performs the image operations such as blurring, color correction etc on the images.
+
+3. And a view to display the image and its histogram.
+
+
+The following image operations are supported by our application:
+
+1. Finding the Red component of the image.
+2. Finding the Green component of the image.  
+3. Finding the Blue component of the image.
+4. Horizontal Flip
+5. Vertical Flip
+6. Luma component (Grayscale)
+7. Sharpen
+8. Blur
+9. Sepia
+10. Compress
+11. Color correct
+12. Level Adjust
+13. Downsize
+14. Split
+	1. Blur
+	2. Sharpen
+	3. Sepia
+	4. Luma
+	5. Color correct
+	6. Level Adjust
+
+
+Steps to use the GUI application:
+
+1. Once the application is started, the user first loads the image into the application. All other operations will be disabled prior to loading an image. 
+
+
+2. Any image format supported by ImageIO and PPM format can be loaded onto the application.
+
+
+3. All operations except for “Undo” will be enabled once the user loads the image. The user can choose to either just save the image, load a different image or perform any operations on the loaded image. 
+
+
+4. Each operation except for save and undo is represented by a radio button. The operation is applied on the image once the user clicks the respective radio button. The “Undo” button will be enabled at this point to the user if he/she wishes to undo the operation. 
+
+
+5. Multiple operations can be applied on the image in the same session.
+
+
+6. An example of the operation is - the user first applies the blur filter by selecting the “Blur” radio button and then applies the sepia filter on the blurred image by selecting the “Sepia” radio button. 
+
+
+7. If the user clicks on the “Split” radio button to perform a split operation, a “Split Operations” dialog box is shown which contains a dropdown of the split operations that are available and the percentage of the width of the image that the user wants to view the split image.
+
+8. The split view gives a preview of how the image would look with the filter applied. Once the user views the split image, he/she can decide to undo the operation in case the applied filter is not desirable.
+
+
+9. If the user clicks on the “Level Adjust” radio button, or selects the “Level-Adjust” option in the “Split Operations” dialog box, a dialog box appears where the user can enter the "b","m " and "w" values for the level adjustment operation. 
+
+
+10. If the user clicks on the “Compress” radio button, a dialog box appears where the user can enter the desired compression percentage. 
+
+
+11. If the user clicks on the “Downsize” radio button, a “Downsize” dialog box appears where the user enters the downsized width and height desirable.
+
+
+12. After each operation, the image appears/updates in its placeholder and the respective histogram updates itself automatically. 
+
+
+13. The user can save this image or can just choose to discard the present image and load a new image. If the changes to the image have not been saved, the user is prompted that the current image is not saved and whether he would really like to load a new image. 
+
+
+14. The user cannot undo an operation once the image has already been saved. 
+

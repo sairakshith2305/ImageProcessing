@@ -1,0 +1,107 @@
+# 1. incorrect load command
+Lo /Users/sairakshithavadhanims/Desktop/nature_image.jpg man
+# incorrect number of parameters to load
+Load /Users/sairakshithavadhanims/Desktop/nature_image.jpg
+Load man
+
+# 2. incorrect save command
+Sa /Users/sairakshithavadhanims/Desktop/nature_image.jp man
+# incorrect number of parameters to save
+Save /Users/sairakshithavadhanims/Desktop/nature_image.jp
+Save man
+
+# 3. incorrect horizontal-flip command
+hori-Flip man man-hori
+#incorrect number of parameters to horizontal flip
+horizontal-flip man
+
+# 5. incorrect vertical-flip command
+verti-Flip man man-verti
+#incorrect number of parameters to vertical-flip
+vertical-flip man
+
+# 6. incorrect brighten command
+brigt
+bright 50 man man-brighten
+#incorrect parameter
+brighten fifty man man-brighten
+#missing parameter
+brighten man man-brighten
+
+# 7. incorrect sharpen command
+Sharp man man-sharp
+# incorrect number of parameters to sharpen.
+sharpen man-sharp
+
+# 8. incorrect blur
+Blu man man-blur
+#incorrect number of parameters to blur
+blur man
+
+#9 incorrect sepia
+Speia man man-sepia
+#incorrect number of parameters to sepia
+sepia man
+
+#10 incorrect value-component
+Value-compent
+#incorrect number of parameters to value component
+value-component img-value
+
+#11 incorrect intensity-component
+inte-compent
+#incorrect number of parameters to intensity component
+intensity-component img-intensity
+
+# 12. incorrect luma-component
+Lum man man-lum
+#incorrect number of parameters to luma component
+luma-component img-luma
+
+# 13 incorrect rgb split
+Rgb-slit man man-red man-green
+#incorrect number of parameters to rgb-split
+rgb-split man man-green
+
+#14 incorrect rgb combine
+Rgb-combime a m b c
+#incorrect number of parameters to rgb-combine
+rgb-combine a m b
+
+#15 incorrect red-component
+re-component man man-red
+#incorrect number of parameters to red-component
+red-component man-red
+
+#16 incorrect green-component
+gren-component man man-red
+#incorrect number of parameters to red-component
+green-component man-green
+
+#17 incorrect blue-component
+blu-component man man-red
+#incorrect number of parameters to red-component
+blue-component man-blue
+
+#16 incorrect exit
+Ext
+
+# 17 incorrect file path and name
+Load /Users/sairakshithavadhanims/nature_image.jpg man
+
+# 18. No file name
+Load /Users/sairakshithavadhanims/Desktop/nature_image.jpg
+
+# 19. Wrong command
+Lo /Users/sairakshithavadhanims/Desktop/nature_image.jpg
+
+# 20. exit command
+#incorrect command
+eixt
+
+# 21. Exit command to exit the error file.
+exit
+
+
+
+
